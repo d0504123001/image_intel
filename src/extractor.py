@@ -120,8 +120,9 @@ def extract_metadata(image_path):
         "camera_model": camera_model(data),
         "has_gps": has_gps(data)
     }
+    # print('exif:',exif)
     return exif_dict
-
+# print('extract_metadata:',extract_metadata( r'C:\Users\esti7\PycharmProjects\PythonProject\image-intel\image_intel\images\20230803_114132.jpg'))
 def extract_all(folder_path: str) -> list[dict]:
     results = []
     path = Path(folder_path)
@@ -134,4 +135,4 @@ def extract_all(folder_path: str) -> list[dict]:
             results.append(data)
 
     return results
-print(extract_all ( r'C:\Users\esti7\PycharmProjects\PythonProject\image-intel\image_intel\images'))
+# print(extract_all ( r'C:\Users\esti7\PycharmProjects\PythonProject\image-intel\image_intel\images'))
